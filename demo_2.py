@@ -31,6 +31,6 @@ def merge(left, right):
     return merged
 if __name__== "__main__":
     # Example usage
-    arr = [5, 2, 8, 12, 3]
+    arr = [5, 2, 8, 12, 3, 9, 10, 3]
     sorted_arr = merge_sort(arr)
     print(sorted_arr)
