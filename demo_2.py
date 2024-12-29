@@ -29,8 +29,8 @@ def merge(left, right):
     merged.extend(right[right_index:])
     
     return merged
-
-# Example usage
-arr = [5, 2, 8, 12, 3]
-sorted_arr = merge_sort(arr)
-print(sorted_arr)
+if __name__== "__main__":
+    # Example usage
+    arr = [5, 2, 8, 12, 3]
+    sorted_arr = merge_sort(arr)
+    print(sorted_arr)
