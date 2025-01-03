@@ -12,6 +12,16 @@ def merge_sort(arr):
     
     return merge(left_half, right_half)
 
+def bubble_sort(arr):
+    n = len(arr)
+    
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    
+    return arr
+
 def merge(left, right):
     merged = []
     left_index = 0
@@ -29,8 +39,31 @@ def merge(left, right):
     merged.extend(right[right_index:])
     
     return merged
+def merge(left, right):
+    merged = []
+    left_index = 0
+    right_index = 0
+    
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] < right[right_index]:
+            merged.append(left[left_index])
+            left_index += 1
+        else:
+            merged.append(right[right_index])
+            right_index += 1
+    
+    merged.extend(left[left_index:])
+    merged.extend(right[right_index:])
+
+
+    
+    return merged
+
 if __name__== "__main__":
     # Example usage
     arr = [5, 2, 8, 12, 3, 9, 10, 3]
     sorted_arr = merge_sort(arr)
     print(sorted_arr)
+    sorted_arr_bubble = bubble_sort(arr)
+    print(sorted_arr_bubble)
+
